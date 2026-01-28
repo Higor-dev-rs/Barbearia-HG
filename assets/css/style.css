@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+    background-color: #262626;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo-barber {
+    background-color: #8C7C5E;
+    width: 100%;
+    padding: 20px 0;
+    min-height: 200px;
+}
+
+.logo-hg {
+    width: 250px;
+    height: auto;
+    margin-top: -50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+.link_header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.link_header li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.link_header li a:hover {
+    color: #D9BA5F;
+    font-weight: bold;
+    box-shadow: 0 1px 0 0 #D9BA5F;
+}
+
+.img-banner {
+    max-width: 980px;
+    width: 100%;
+    height: 400px;
+    margin: 30px auto;
+}
+
+h1 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.font-size {
+    font-size: 28px;
+    color: #D9BA5F;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+h1, h3, .subtitulo {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.img-sobre, .img-barbeiros{
+    max-width: 450px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.texto-sobre {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    margin: 30px auto;
+    padding: 0 30px;
+    color: #fff;
+}
+
+.texto-negrito {
+    font-weight: bold;
+}
+
+.texto-cor {
+    color: #D9BA5F;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 24px;
+    color: #D9BA5F;
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+}
+
+.link {
+    color: #D9BA5F;
+    text-decoration: none;
+}
+
+.sobre, .servicos, .barbeiros, .contato {
+    padding: 20px 0; 
+}
+
+.servicos, .contato {
+    background-color: #464444;
+    color: #fff; 
+    margin: 0 auto;
+}
+
+iframe {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.servicos ul li {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+    width: 200px;
+    margin: 40px auto;
+}
+
+h3 { 
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.formulario {
+   align-items: center;
+   text-align: center;
+    max-width: 700px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+label {
+    display: block;
+    color: #D9BA5F;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #D9BA5F;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    background-color: #262626;
+    color: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #D9BA5F;
+    box-shadow: 0 0 0 3px #D9BA5F;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+        
+button {
+    width: 100%;
+    background-color: #D9BA5F;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(197, 166, 124, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #262626;
+}
+
+.rodape {
+    background-color: #8C7C5E;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.rodape a {
+    text-decoration: underline;
+    color: #D9BA5F;
+}
