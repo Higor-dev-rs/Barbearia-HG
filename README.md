@@ -6,6 +6,28 @@ O projeto foi expandido para uma aplicação full stack com PHP e MySQL, permiti
 
 ---
 
+## Screenshots
+
+## Página Inicial
+
+![Página Inicial](docs/home_barbearia_hg.png)
+
+## Formulário Agendamento
+
+![Formulário agendamento](docs/home_form_hg.png)
+
+## Painel Administrativo
+
+![Painel Admin](docs/admin_barbearia_hg.png)
+
+## Versão Mobile
+
+![Versão Mobile](docs/form_mobile_hg.png)
+
+## Modelagem do Processo
+
+![BPMN](docs/bpmn_barbearia_hg.png)
+
 ## 🚀 Funcionalidades
 
 - Agendamento de horários
@@ -16,7 +38,7 @@ O projeto foi expandido para uma aplicação full stack com PHP e MySQL, permiti
 - Interface responsiva
 - Estrutura organizada em pastas
 - Uso de Prepared Statements com PDO
-- Tratamento e exibição de dados
+- Tratamento de dados e exibição dinâmica
 
 ---
 
@@ -166,8 +188,6 @@ http://localhost/Barbearia-HG
 
 Desenvolvido por Higor Rodrigues dos Santos.
 
-- LinkedIn:
-  https://linkedin.com/in/higor-rodrigues-dev
+[LinkedIn:](https://linkedin.com/in/higor-rodrigues-dev)
 
-- GitHub:
-  https://github.com/Higor-dev-rs
+[GitHub:](https://github.com/Higor-dev-rs)
