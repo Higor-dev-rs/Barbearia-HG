@@ -1,3 +1,44 @@
+<?php
+include_once 'config/conexao.php';
+
+// Verificando se o formulário foi enviado via POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Captura os dados do formulário
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $servico = $_POST['servico'];
+    $data = str_replace('T', ' ', $_POST['data']);
+
+    if (!empty($nome) && !empty($data) && !empty($servico)) {
+
+        try {
+            // Prepara o SQL para inserção (usando Prepared Statements para segurança)
+            $sql = "INSERT INTO agendamentos (nome, email, telefone, servico, data_agendamento) VALUES (:nome, :email, :telefone, :servico, :data_agendamento)";
+            $stmt = $pdo->prepare($sql);
+
+            // Vincula os valores com segurança com bind param e placeholder's
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':telefone', $telefone);
+            $stmt->bindParam(':servico', $servico);
+            $stmt->bindParam(':data_agendamento', $data);
+
+            if ($stmt->execute()) {
+                
+                header("Location: index.php?sucesso=1");
+                exit();
+            }
+        } catch (PDOException $e) {
+            echo "Erro ao agendar: " . $e->getMessage();
+        }
+    
+    } else {
+        echo "<script>alert('Por favor, preencha todos os campos obrigatórios.');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,6 +52,11 @@
     <title>Barbearia HG</title>
 </head>
 <body>
+<?php
+    if (isset($_GET['sucesso'])) {
+        echo "<script>alert('Agendamento realizado com sucesso!');</script>";
+    }
+?>
     <header class="logo-barber">
         <img src="assets/img/logo.barber.png" alt="Logo Barbearia HG" class="logo-hg">
 
@@ -25,14 +71,14 @@
 
     </header>
 
-    <main class="conteiner-conteudo">
+    <main class="container-conteudo">
         <figure class="banner">
             <img src="assets/img/banner-barber.jpg" alt="imagem da barbearia" class="img-banner">
         </figure>
 
         <section class="sobre" id="sobre">
             <h1>Conheça a melhor barbearia da região</h1>
-            <h2 class="font-size">Venha ficar com seu visual impecável</h2>
+            <h2 class="subtitulo-destaque">Venha ficar com seu visual impecável</h2>
 
             <img src="assets/img/img.barber.checkpoint.jpg" alt="imagem interna da barbearia" class="img-sobre">
 
@@ -50,8 +96,8 @@
 
             Mais do que serviços, nós proporcionamos um ritual de cuidado, relaxamento e transformação. Descubra a seguir o que temos a oferecer e agende seu momento.</p>
 
-            <ul>
-                <li>Corte Clássico</li>
+            <ul id="lista-servicos">
+                <li>Corte Clássico</li> 
 
                 <li>Corte na Tesoura</li>
 
@@ -83,34 +129,49 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4340.703404441696!2d-43.32292452613496!3d-22.82235597126697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997b462bb5da1f%3A0xb81bcd94a6543688!2sAv.%20Ayrton%20Senna%2C%203000%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-003!5e1!3m2!1spt-BR!2sbr!4v1758071777539!5m2!1spt-BR!2sbr" width="700" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
             <section class="formulario-contato">
-                <h3>Deixe seu contato e entraremos em contato para agendar o seu atendimento personalizado.</h3>
-                <form class="formulario">
+                <h3>Preencha com seus dados, data e horário que deseja agendar seu atendimento</h3>
+                <form class="formulario" method="POST" action="index.php">
 
                     <div class="input">
-                        <label for="nome">Preencha seu nome:</label><br>
-                        <input type="text" name="nome" placeholder="Nome" required><br>
+                        <label for="nome">Preencha seu nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Nome" required>
                     </div>
 
                     <div class="input">
-                        <label for="email">Preencha seu e-mail:</label><br>
-                        <input type="email" name="email" placeholder="Email" required><br>
+                        <label for="email">Preencha seu e-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
                     </div>
 
                     <div class="input">
-                        <label for="tel">Digite seu número:</label><br>
-                        <input type="tel" name="telefone" placeholder="Telefone" required><br>
+                        <label for="tel">Digite seu número:</label>
+                        <input type="tel" name="telefone" id="tel" placeholder="Telefone" required>
                     </div>
 
                     <div class="input">
-                    <label for="mensagem">Mensagem:</label><br>
-                    <textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea><br><br>
+                        <label for="date">Escolha sua data e hora:</label>
+                        <input type="datetime-local" name="data" id="date" required>
                     </div>
 
-                    <button type="submit">Agendar</button>
+                    <div class="input">
+                        <label for="servico">Escolha o serviço:</label>
+                        <select name="servico" id="servico" required>
+                            <option value="" disabled selected>Selecione um Serviço</option>
+                            <option value="Corte Clássico">Corte Clássico</option>
+                            <option value="Corte na Tesoura">Corte na Tesoura</option>
+                            <option value="Corte e Barba">Corte e Barba</option>
+                            <option value="Barba Terapeutica">Barba Terapêutica</option>
+                            <option value="Design de Barba">Design de Barba</option>
+                            <option value="hidratacao">Hidratação Capilar</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="btn-agendar">Agendar</button>
+                    <div id="feedback-msg"></div>
                 </form>
             </section>
         </section>    
     </main>
+
     <footer class="rodape">
         
         <address>
@@ -118,9 +179,12 @@
             Telefone: <a href="tel:22912345678">(22) 91234-5678</a><br>
             Email: <a href="mailto:barbeariahg@gmail.com">barbeariahg@gmail.com</a>
         </address>
+
         <p>© 2025 Barbearia HG. Todos os direitos reservados.</p>
         <p>Desenvolvido por <span class="texto-cor">Higor Rodrigues</span></p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
 

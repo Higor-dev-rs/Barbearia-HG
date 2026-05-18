@@ -1,226 +1,286 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.conteiner-conteudo {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 90%;
-    padding: 20px;
+.container-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 20px;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    text-align: center;
-    background-color: #262626;
-    font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: #262626;
+  font-family: "Roboto", sans-serif;
 }
 
 .logo-barber {
-    background-color: #8C7C5E;
-    width: 100%;
-    padding: 20px 0;
-    min-height: 200px;
+  background-color: #8c7c5e;
+  width: 100%;
+  padding: 20px 0;
+  min-height: 200px;
 }
 
 .logo-hg {
-    width: 250px;
-    height: auto;
-    margin-top: -50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    color: #fff;
+  width: 250px;
+  height: auto;
+  margin-top: -50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
 }
 
 .link_header ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0;
 }
 
 .link_header li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    padding: 5px 10px;
-    display: inline-block;
-    transition: 0.3s;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
 .link_header li a:hover {
-    color: #D9BA5F;
-    font-weight: bold;
-    box-shadow: 0 1px 0 0 #D9BA5F;
+  color: #d9ba5f;
+  font-weight: bold;
+  box-shadow: 0 1px 0 0 #d9ba5f;
 }
 
 .img-banner {
-    max-width: 980px;
-    width: 100%;
-    height: 400px;
-    margin: 30px auto;
+  max-width: 980px;
+  width: 100%;
+  height: 400px;
+  margin: 30px auto;
 }
 
 h1 {
-    font-size: 28px;
-    color: #fff;
+  font-size: 28px;
+  color: #fff;
 }
 
-.font-size {
-    font-size: 28px;
-    color: #D9BA5F;
-    margin-top: 30px;
-    font-weight: bold;
+.subtitulo-destaque {
+  font-size: 28px;
+  color: #d9ba5f;
+  margin-top: 30px;
+  font-weight: bold;
 }
 
-h1, h3, .subtitulo {
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 20px;
-    padding: 0;
+h1,
+.subtitulo {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
 
-.img-sobre, .img-barbeiros{
-    max-width: 450px;
-    width: 100%;
-    margin: 30px auto;
+.img-sobre,
+.img-barbeiros {
+  max-width: 450px;
+  width: 100%;
+  margin: 30px auto;
 }
 
 .texto-sobre {
-    font-size: 18px;
-    line-height: 30px;
-    text-align: center;
-    margin: 30px auto;
-    padding: 0 30px;
-    color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 0 30px;
+  color: #fff;
 }
 
 .texto-negrito {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .texto-cor {
-    color: #D9BA5F;
-    font-weight: bold;
+  color: #d9ba5f;
+  font-weight: bold;
 }
 
 .subtitulo {
-    font-size: 24px;
-    color: #D9BA5F;
-    text-align: center;
-    font-weight: bold;
-    padding: 0;
+  font-size: 24px;
+  color: #d9ba5f;
+  text-align: center;
+  font-weight: bold;
+  padding: 0;
 }
 
 .link {
-    color: #D9BA5F;
-    text-decoration: none;
+  color: #d9ba5f;
+  text-decoration: none;
 }
 
-.sobre, .servicos, .barbeiros, .contato {
-    padding: 20px 0; 
+.sobre,
+.servicos,
+.barbeiros,
+.contato {
+  padding: 20px 0;
 }
 
-.servicos, .contato {
-    background-color: #464444;
-    color: #fff; 
-    margin: 0 auto;
+.servicos,
+.contato {
+  background-color: #464444;
+  color: #fff;
+  margin: 0 auto;
 }
 
 iframe {
-    margin-top: 25px;
-    width: 100%;
-    max-width: 600px;
+  margin-top: 25px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .servicos ul li {
-    font-size: 18px;
-    line-height: 30px;
-    text-align: left;
-    width: 200px;
-    margin: 40px auto;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  width: 200px;
+  margin: 40px auto;
 }
 
-h3 { 
-    font-size: 24px;
-    padding: 20px 0;
+h3 {
+  font-size: 24px;
+  padding: 20px 0;
 }
 
 .formulario {
-   align-items: center;
-   text-align: center;
-    max-width: 700px;
-    width: 100%;
-    margin: 10px auto;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 5px auto;
 }
 
 label {
-    display: block;
-    color: #D9BA5F;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-    margin-top: 0.5rem;
+  display: block;
+  color: #d9ba5f;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #D9BA5F;
-    border-radius: 0.75rem;
-    transition: all 0.2s ease-in-out;
-    box-sizing: border-box;
-    background-color: #262626;
-    color: #f1f1f1;
+input[type="datetime-local"] {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d9ba5f;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  background-color: #262626;
+  color: #f1f1f1;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(74%) sepia(51%) saturate(545%) hue-rotate(3deg) brightness(92%)
+    contrast(88%);
+  cursor: pointer;
+}
+
+input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+  color: #888;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
-textarea:focus {
-    outline: none;
-    border-color: #D9BA5F;
-    box-shadow: 0 0 0 3px #D9BA5F;
+input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: #d9ba5f;
+  box-shadow: 0 0 0 3px #d9ba5f;
 }
 
-textarea {
-    resize: vertical;
-    height: 100px;
+/* Estilizando o campo de seleção de serviços */
+select {
+  width: 90%;
+  padding: 12px;
+  /* margin: 10px 0; */
+  border: 1px solid #d9ba5f; /* O dourado que você está usando */
+  border-radius: 0.5rem;
+  background-color: #262626; /* Fundo escuro para combinar com o tema */
+  color: #fff; /* Texto branco */
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"292.4"%20height%3D"292.4"><path%20fill%3D"%23d4af37"%20d%3D"M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z"%2F><%2Fsvg>');
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 12px auto;
+  cursor: pointer;
+  color: #888;
 }
-        
+
+/* Efeito ao focar no campo */
+select:focus {
+  outline: none;
+  border-color: #d9ba5f;
+  box-shadow: 0 0 5px #d9ba5f;
+}
+
+/* Estilizando as opções dentro do select */
+select option {
+  background-color: #262626;
+  color: #fff;
+}
+
+select:valid {
+  color: #fff;
+}
+
 button {
-    width: 100%;
-    background-color: #D9BA5F;
-    color: #fff;
-    font-weight: 700;
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 15px rgba(197, 166, 124, 0.2);
-    border: none;
-    cursor: pointer;
+  width: 90%;
+  background-color: #d9ba5f;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  margin-top: 20px;
+  transition:
+    background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(197, 166, 124, 0.2);
+  border: none;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #262626;
+  background-color: #262626;
+}
+
+#feedback-msg {
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 .rodape {
-    background-color: #8C7C5E;
-    color: #fff;
-    padding: 20px 0;
+  background-color: #8c7c5e;
+  color: #fff;
+  padding: 20px 0;
 }
 
 .rodape a {
-    text-decoration: underline;
-    color: #D9BA5F;
+  text-decoration: underline;
+  color: #d9ba5f;
 }

@@ -1,23 +1,173 @@
-# ✂️ Barbearia HG
+# Barbearia HG 💈
 
-Este projeto é o resultado da minha evolução como desenvolvedor Front-end. Ele nasceu originalmente como um exercício prático do curso da **DevMedia** onde o objetivo era praticar os conhecimentos iniciais do curso, mas agora foi totalmente transformado por mim para refletir meus conhecimentos atuais.
+Sistema web de agendamento para barbearia desenvolvido como evolução de uma landing page autoral criada inicialmente para estudos de front-end.
 
-## 🚀 Da Aula para a Prática (Minhas Melhorias)
-
-Após concluir a base do projeto, decidi aplicar uma **refatoração completa** por conta própria, focando em profissionalismo e performance:
-
-* **Semântica Avançada:** Reestruturei todo o HTML para utilizar tags semânticas (`main`, `section`, `article`, `header`, `footer`), melhorando a acessibilidade e o SEO.
-
-* **Modernização do Design:** Alterei a paleta de cores e o layout original para criar uma identidade visual mais clean e moderna.
-
-* **Código Limpo (Clean Code):** Organizei o CSS, removendo redundâncias e melhorando a manutenção do código.
-
-* **Boas Práticas de Git:** Migrei o projeto de uploads manuais para um fluxo de trabalho profissional via terminal com Git/GitHub.
-
-## 🛠️ Tecnologias Utilizadas
-* HTML5 (Foco em semântica)
-* CSS3 (Layout e Estilização)
-* Git & GitHub (Versionamento)
+O projeto foi expandido para uma aplicação full stack com PHP e MySQL, permitindo o gerenciamento de agendamentos e visualização administrativa dos atendimentos.
 
 ---
-*Este projeto serve como um marco da minha transição de estudante para um desenvolvedor que busca autonomia e qualidade de código.*
+
+## 🚀 Funcionalidades
+
+- Agendamento de horários
+- Integração com banco de dados MySQL
+- Painel administrativo
+- Listagem de agendamentos
+- Filtro por período
+- Interface responsiva
+- Estrutura organizada em pastas
+- Uso de Prepared Statements com PDO
+- Tratamento e exibição de dados
+
+---
+
+## 📊 Documentação
+
+O projeto possui uma modelagem inicial de fluxo utilizando BPMN, criada com foco em aprendizado de análise e modelagem de sistemas.
+
+O diagrama representa o fluxo de agendamento, validação de disponibilidade e visualização administrativa do sistema.
+
+### Fluxo Atual/Futuro do Sistema
+
+- Usuário realiza agendamento
+- Sistema recebe os dados via POST
+- Verificação de disponibilidade de horário
+- Envio para banco de dados
+- Retorno de confirmação
+- Visualização no painel administrativo
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+### Front-end
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Back-end
+
+- PHP
+
+### Banco de Dados
+
+- MySQL
+
+### Ferramentas
+
+- Git
+- GitHub
+- VS Code
+- MySQL Workbench
+
+---
+
+## 📂 Estrutura do Projeto
+
+```bash id="jlwm8s"
+Barbearia-HG/
+│
+├── assets/
+│   ├── css/
+│   ├── img/
+│   └── js/
+│
+├── config/
+│   └── conexao.php
+│
+├── database/
+│   └── db_barbearia.sql
+│
+├── docs/
+│   └── bpmn-barbearia.png
+│
+├── pages/
+│   └── admin.php
+│
+├── index.php
+├── README.md
+└── .gitignore
+```
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### 1. Clone o repositório
+
+```bash id="q5av2q"
+git clone https://github.com/Higor-dev-rs/Barbearia-HG.git
+```
+
+### 2. Configure o ambiente
+
+Necessário possuir:
+
+- PHP
+- MySQL
+- XAMPP, WAMP ou Laragon
+
+### 3. Importe o banco de dados
+
+Importe o arquivo:
+
+```bash id="jlwm9m"
+database/db_barbearia.sql
+```
+
+### 4. Configure a conexão com o banco
+
+No arquivo:
+
+```bash id="mjlwm2"
+config/conexao.php
+```
+
+altere as informações conforme seu ambiente local:
+
+```php id="s2m1iz"
+$host = "localhost";
+$dbname = "nome_do_banco";
+$usuario = "seu_usuario";
+$senha = "sua_senha";
+```
+
+### 5. Execute o projeto
+
+Coloque a pasta do projeto dentro do servidor local:
+
+```bash id="jlwm2a"
+htdocs/
+```
+
+e acesse:
+
+```bash id="j2h9d1"
+http://localhost/Barbearia-HG
+```
+
+---
+
+## 📈 Melhorias Futuras
+
+- Login administrativo
+- Controle de sessões
+- Validação de conflitos de horário
+- Relacionamento entre tabelas
+- Edição e exclusão de agendamentos
+- Controle de barbeiros
+- Status de agendamento
+- Melhorias de UX/UI
+- Refatoração e separação de responsabilidades
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por Higor Rodrigues dos Santos.
+
+- LinkedIn:
+  https://linkedin.com/in/higor-rodrigues-dev
+
+- GitHub:
+  https://github.com/Higor-dev-rs
