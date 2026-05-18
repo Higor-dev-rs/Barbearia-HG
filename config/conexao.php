@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$dbname = "barbearia_hg";
-$usuario = "root";
-$senha = "";
+$dbname = "meu_banco_dados";
+$usuario = "meu_usuario";
+$senha = "minha_senha";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $usuario, $senha);
